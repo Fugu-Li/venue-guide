@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年会培训场地指引 - 成都瑧林MUSTEL木文缇酒店 | Annual Meeting Venue Guide - MUSTEL Hotel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5fb4 0%, #2a82d9 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(40%, -40%);
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hotel-info {
+            background-color: #f0f7ff;
+            padding: 25px 40px;
+            border-bottom: 1px solid #e1e8f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hotel-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: #1a5fb4;
+        }
+        
+        .address {
+            font-size: 1.2rem;
+            color: #1a5fb4;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .address-en {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .lang-toggle {
+            text-align: right;
+            padding: 10px 40px 0 40px;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #1a5fb4;
+            color: #1a5fb4;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            transition: all 0.3s;
+        }
+        
+        .lang-btn.active {
+            background: #1a5fb4;
+            color: white;
+        }
+        
+        .lang-btn:hover {
+            background: #1a5fb4;
+            color: white;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        
+        .transport-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 40px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+            color: #1a5fb4;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e8f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            font-size: 1.8rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-weight: normal;
+            margin-left: 10px;
+            font-style: italic;
+        }
+        
+        .steps {
+            margin-left: 10px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #1a5fb4;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .step-content h3.en {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .step-content p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .step-content p.en {
+            color: #777;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background-color: #e9f2fb;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .map-placeholder i {
+            font-size: 4rem;
+            color: #1a5fb4;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note p.en {
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        
+        /* 推荐部分样式 */
+        .recommendations-section {
+            width: 100%;
+            padding: 0 40px;
+            margin-bottom: 30px;
+        }
+        
+        .recommendation-type {
+            margin-top: 30px;
+        }
+        
+        .recommendation-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eaeaea;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background-color: #1a5fb4;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-header i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .card-subtitle {
+            font-size: 0.95rem;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .card-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .card-detail i {
+            color: #1a5fb4;
+            width: 20px;
+            margin-right: 10px;
+        }
+        
+        .card-detail .en {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-left: 30px;
+            margin-top: 2px;
+        }
+        
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background-color: #f0f7ff;
+            color: #1a5fb4;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .tag.en {
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #f0f7ff;
+            color: #666;
+            border-top: 1px solid #e1e8f0;
+            margin-top: 20px;
+        }
+        
+        .contact {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .contact p.en {
+            margin-top: 2px;
+            font-size: 0.95rem;
+            color: #777;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .transport-section, .recommendations-section {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            header, .hotel-info, .transport-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>年会培训场地指引</h1>
+            <p class="subtitle">成都瑧林MUSTEL木文缇酒店 · 详细抵达指南</p>
+            <h1 class="en">Annual Meeting Venue Guide</h1>
+            <p class="subtitle en">MUSTEL Hotel · Detailed Arrival Instructions</p>
+        </header>
+        
+        <div class="lang-toggle">
+            <button class="lang-btn active" id="btn-zh">中文</button>
+            <button class="lang-btn" id="btn-en">English</button>
+        </div>
+        
+        <div class="hotel-info">
+            <div class="hotel-icon">
+                <i class="fas fa-hotel"></i>
+            </div>
+            <div>
+                <h2>培训场地地址</h2>
+                <h2 class="en">Venue Address</h2>
+                <p class="address">成都市高新区天府三街1304号</p>
+                <p class="address-en">No. 1304, Tianfu 3rd Street, High-Tech Zone, Chengdu</p>
+                <p>成都瑧林MUSTEL木文缇酒店 · 三楼会议中心</p>
+                <p class="address-en">MUSTEL Hotel · 3rd Floor Conference Center</p>
+            </div>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="transport-section">
+                <h2 class="section-title"><i class="fas fa-car"></i> 开车前往</h2>
+                <h2 class="section-title en" style="margin-top: -20px;"><i class="fas fa-car"></i> By Car</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>主要路线选择</h3>
+                            <h3 class="en">Main Route Selection</h3>
+                            <p>从市中心（天府广场）出发，沿人民南路南行，转入天府大道，直行至天府三街路口。</p>
+                            <p class="en">From downtown (Tianfu Square), head south on Renmin South Road, turn onto Tianfu Avenue, and go straight to the intersection of Tianfu 3rd Street.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>驶入天府三街</h3>
+                            <h3 class="en">Enter Tianfu 3rd Street</h3>
+                            <p>在天府三街路口右转，沿天府三街向西行驶约500米。</p>
+                            <p class="en">Turn right at the intersection of Tianfu 3rd Street and drive west for about 500 meters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>抵达酒店</h3>
+                            <h3 class="en">Arrive at Hotel</h3>
+                            <p>酒店位于天府三街南侧，请留意"瑧林MUSTEL木文缇酒店"标识，地下停车场入口在酒店正门右侧。</p>
+                            <p class="en">The hotel is located on the south side of Tianfu 3rd Street. Look for the "MUSTEL Hotel" sign. The underground parking entrance is on the right side of the main entrance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>停车信息</h3>
+                            <h3 class="en">Parking Information</h3>
+                            <p>酒店提供地下停车场，年会参会车辆可凭会议凭证享受免费停车服务。停车场电梯可直达三楼会议中心。</p>
+                            <p class="en">The hotel provides underground parking. Annual meeting attendees can enjoy free parking with conference credentials. The parking elevator goes directly to the 3rd floor conference center.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>开车路线示意图</p>
+                        <p class="en">Driving Route Map</p>
+                        <p>从天府广场到酒店约8.5公里，预计行驶时间25-35分钟</p>
+                        <p class="en">About 8.5km from Tianfu Square to the hotel, estimated driving time 25-35 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="note">
+                    <p><strong>温馨提示：</strong>早高峰时段（7:30-9:00）天府大道车流量较大，建议提前出发。酒店周边也有多个公共停车场可供选择。</p>
+                    <p class="en"><strong>Note:</strong> During morning rush hours (7:30-9:00), Tianfu Avenue has heavy traffic. We recommend departing earlier. There are also several public parking lots around the hotel.</p>
+                </div>
+            </div>
+            
+            <div class="transport-section">
+                <h2 class="section-title"><i class="fas fa-subway"></i> 地铁前往</h2>
+                <h2 class="section-title en" style="margin-top: -20px;"><i class="fas fa-subway"></i> By Metro</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>地铁线路选择</h3>
+                            <h3 class="en">Metro Line Selection</h3>
+                            <p>乘坐成都地铁1号线，前往科学城方向，在天府三街站下车。</p>
+                            <p class="en">Take Chengdu Metro Line 1 (toward Science City) and get off at Tianfu 3rd Street Station.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>选择出口</h3>
+                            <h3 class="en">Select Exit</h3>
+                            <p>从地铁天府三街站C1或C2出口出站，这两个出口距离酒店最近。</p>
+                            <p class="en">Exit from C1 or C2 exit of Tianfu 3rd Street Station. These exits are closest to the hotel.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>步行指引</h3>
+                            <h3 class="en">Walking Directions</h3>
+                            <p>出站后沿天府三街向西步行约300米（约5分钟），酒店位于道路南侧。</p>
+                            <p class="en">After exiting, walk west along Tianfu 3rd Street for about 300 meters (approx. 5 minutes). The hotel is on the south side of the road.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>进入酒店</h3>
+                            <h3 class="en">Enter Hotel</h3>
+                            <p>从酒店正门进入，前台左侧有专用电梯可直达三楼会议中心。</p>
+                            <p class="en">Enter through the main entrance. There is a dedicated elevator on the left side of the front desk that goes directly to the 3rd floor conference center.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-signs"></i>
+                        <p>地铁及步行路线图</p>
+                        <p class="en">Metro & Walking Route Map</p>
+                        <p>地铁1号线天府三街站 → 步行5分钟 → 酒店</p>
+                        <p class="en">Metro Line 1 Tianfu 3rd Street Station → 5-minute walk → Hotel</p>
+                    </div>
+                </div>
+                
+                <div class="note">
+                    <p><strong>温馨提示：</strong>地铁1号线早高峰时段较为拥挤，建议提前规划时间。从火车南站换乘仅需2站即可到达天府三街站。</p>
+                    <p class="en"><strong>Note:</strong> Metro Line 1 is crowded during morning rush hours. We recommend planning your time accordingly. From South Railway Station, it's only 2 stops to Tianfu 3rd Street Station.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 附近推荐部分 -->
+        <div class="recommendations-section">
+            <h2 class="section-title"><i class="fas fa-utensils"></i> 附近餐饮推荐</h2>
+            <h2 class="section-title en" style="margin-top: -20px;"><i class="fas fa-utensils"></i> Nearby Dining Recommendations</h2>
+            
+            <div class="recommendation-type">
+                <h3 style="color: #1a5fb4; margin-bottom: 5px;"><i class="fas fa-utensil-spoon"></i> 餐厅推荐</h3>
+                <h3 style="color: #1a5fb4; margin-bottom: 15px; font-size: 1.2rem; font-style: italic;">Restaurant Recommendations</h3>
+                
+                <div class="recommendation-cards">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #e74c3c;">
+                            <i class="fas fa-fire"></i>
+                            <h3>火锅 | Hot Pot</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">小龙坎老火锅</div>
+                            <div class="card-subtitle">Xiao Long Kan Hot Pot</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>天府三街大源国际中心B1层</span>
+                                <div class="en">B1 Floor, Dayuan International Center, Tianfu 3rd Street</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-walking"></i>
+                                <span>距离：步行8分钟</span>
+                                <div class="en">Distance: 8-minute walk</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：经典四川火锅，环境优雅</span>
+                                <div class="en">Recommendation: Classic Sichuan hot pot, elegant environment</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">四川菜</span>
+                                <span class="tag en">Sichuan Cuisine</span>
+                                <span class="tag">火锅</span>
+                                <span class="tag en">Hot Pot</span>
+                                <span class="tag">适合团体</span>
+                                <span class="tag en">Group Friendly</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header" style="background-color: #27ae60;">
+                            <i class="fas fa-leaf"></i>
+                            <h3>川菜 | Sichuan Cuisine</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">眉州东坡酒楼</div>
+                            <div class="card-subtitle">Meizhou Dongpo Restaurant</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>高新区天府三街88号</span>
+                                <div class="en">No. 88, Tianfu 3rd Street, High-Tech Zone</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-walking"></i>
+                                <span>距离：步行6分钟</span>
+                                <div class="en">Distance: 6-minute walk</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：经典川菜，东坡肘子是一绝</span>
+                                <div class="en">Recommendation: Classic Sichuan dishes, famous for Dongpo pork knuckle</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">川菜</span>
+                                <span class="tag en">Sichuan Cuisine</span>
+                                <span class="tag">商务宴请</span>
+                                <span class="tag en">Business Dining</span>
+                                <span class="tag">环境优雅</span>
+                                <span class="tag en">Elegant Environment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header" style="background-color: #f39c12;">
+                            <i class="fas fa-pizza-slice"></i>
+                            <h3>西餐 | Western Food</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">蓝蛙西餐厅酒吧</div>
+                            <div class="card-subtitle">Blue Frog Bar & Grill</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>天府大道北段1700号环球中心</span>
+                                <div class="en">No. 1700, Tianfu Avenue North, Global Center</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-car"></i>
+                                <span>距离：车程10分钟</span>
+                                <div class="en">Distance: 10-minute drive</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：美式西餐，汉堡和牛排很棒</span>
+                                <div class="en">Recommendation: American-style Western food, great burgers and steaks</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">西餐</span>
+                                <span class="tag en">Western Food</span>
+                                <span class="tag">酒吧</span>
+                                <span class="tag en">Bar</span>
+                                <span class="tag">商务休闲</span>
+                                <span class="tag en">Business Casual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendation-type">
+                <h3 style="color: #1a5fb4; margin-top: 30px; margin-bottom: 5px;"><i class="fas fa-coffee"></i> 咖啡馆推荐</h3>
+                <h3 style="color: #1a5fb4; margin-bottom: 15px; font-size: 1.2rem; font-style: italic;">Cafe Recommendations</h3>
+                
+                <div class="recommendation-cards">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #8e44ad;">
+                            <i class="fas fa-coffee"></i>
+                            <h3>精品咖啡 | Specialty Coffee</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">星巴克臻选店</div>
+                            <div class="card-subtitle">Starbucks Reserve</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>天府三街福年广场T1号楼</span>
+                                <div class="en">T1 Building, Funian Plaza, Tianfu 3rd Street</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-walking"></i>
+                                <span>距离：步行5分钟</span>
+                                <div class="en">Distance: 5-minute walk</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：高品质咖啡，安静适合商务洽谈</span>
+                                <div class="en">Recommendation: High-quality coffee, quiet environment suitable for business meetings</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">连锁品牌</span>
+                                <span class="tag en">Chain Brand</span>
+                                <span class="tag">商务洽谈</span>
+                                <span class="tag en">Business Meeting</span>
+                                <span class="tag">无线网络</span>
+                                <span class="tag en">Wi-Fi Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header" style="background-color: #16a085;">
+                            <i class="fas fa-mug-hot"></i>
+                            <h3>独立咖啡馆 | Independent Cafe</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">UID Cafe</div>
+                            <div class="card-subtitle">UID Cafe</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>高新区天府三街218号</span>
+                                <div class="en">No. 218, Tianfu 3rd Street, High-Tech Zone</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-walking"></i>
+                                <span>距离：步行7分钟</span>
+                                <div class="en">Distance: 7-minute walk</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：工业风设计，手冲咖啡专业</span>
+                                <div class="en">Recommendation: Industrial design, professional pour-over coffee</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">手冲咖啡</span>
+                                <span class="tag en">Pour-over Coffee</span>
+                                <span class="tag">工业风</span>
+                                <span class="tag en">Industrial Style</span>
+                                <span class="tag">安静环境</span>
+                                <span class="tag en">Quiet Environment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header" style="background-color: #c0392b;">
+                            <i class="fas fa-bread-slice"></i>
+                            <h3>咖啡简餐 | Cafe & Light Meal</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">太平洋咖啡</div>
+                            <div class="card-subtitle">Pacific Coffee</div>
+                            
+                            <div class="card-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>天府三街新希望国际B座</span>
+                                <div class="en">Building B, New Hope International, Tianfu 3rd Street</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-walking"></i>
+                                <span>距离：步行4分钟</span>
+                                <div class="en">Distance: 4-minute walk</div>
+                            </div>
+                            <div class="card-detail">
+                                <i class="fas fa-star"></i>
+                                <span>推荐：咖啡+简餐组合，适合快速用餐</span>
+                                <div class="en">Recommendation: Coffee + light meal combo, suitable for quick dining</div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">简餐</span>
+                                <span class="tag en">Light Meal</span>
+                                <span class="tag">快速服务</span>
+                                <span class="tag en">Quick Service</span>
+                                <span class="tag">商务区</span>
+                                <span class="tag en">Business District</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="note" style="margin-top: 30px;">
+                <p><strong>用餐提示：</strong>以上推荐餐厅和咖啡馆均在酒店附近，步行或短途车程可达。高峰时段建议提前预订。酒店三楼也设有自助餐厅，提供中西式自助午餐（12:00-14:00）。</p>
+                <p class="en"><strong>Dining Tips:</strong> The above recommended restaurants and cafes are all near the hotel, within walking distance or a short drive. We recommend making reservations during peak hours. The hotel also has a buffet restaurant on the 3rd floor offering Chinese and Western buffet lunch (12:00-14:00).</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>如有任何问题，请联系公司行政部或培训负责人</p>
+            <p class="en">For any questions, please contact the Administration Department or training coordinator</p>
+            <div class="contact">
+                <p><i class="fas fa-phone-alt"></i> 行政部联系电话：028-8765-4321</p>
+                <p class="en"><i class="fas fa-phone-alt"></i> Administration Department: 028-8765-4321</p>
+                <p><i class="fas fa-clock"></i> 年会培训时间：2023年12月20日 09:00-17:00</p>
+                <p class="en"><i class="fas fa-clock"></i> Annual Meeting Training Time: Dec 20, 2023 09:00-17:00</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 语言切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const zhBtn = document.getElementById('btn-zh');
+            const enBtn = document.getElementById('btn-en');
+            const enElements = document.querySelectorAll('.en, .address-en');
+            
+            // 默认显示中文，隐藏英文
+            enElements.forEach(element => {
+                element.style.display = 'none';
+            });
+            
+            // 中文显示，英文隐藏
+            zhBtn.addEventListener('click', function() {
+                zhBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                
+                // 显示中文内容
+                document.querySelectorAll('.zh, .address, .card-title, .card-detail span:not(.en), .tag:not(.en), h1:not(.en), h2:not(.en), h3:not(.en), p:not(.en), .subtitle:not(.en)').forEach(el => {
+                    el.style.display = 'block';
+                });
+                
+                // 隐藏英文内容
+                enElements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            });
+            
+            // 英文显示，中文隐藏
+            enBtn.addEventListener('click', function() {
+                enBtn.classList.add('active');
+                zhBtn.classList.remove('active');
+                
+                // 隐藏中文内容
+                document.querySelectorAll('.zh, .address, .card-title, .card-detail span:not(.en), .tag:not(.en), h1:not(.en), h2:not(.en), h3:not(.en), p:not(.en), .subtitle:not(.en)').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // 显示英文内容
+                enElements.forEach(element => {
+                    element.style.display = 'block';
+                });
+                
+                // 特殊处理：显示英文标题
+                document.querySelectorAll('.section-title.en, .en').forEach(el => {
+                    el.style.display = 'block';
+                });
+            });
+            
+            // 简单的交互效果
+            const steps = document.querySelectorAll('.step');
+            
+            steps.forEach(step => {
+                step.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                step.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+            // 卡片交互效果
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // 地图容器的交互效果
+            const mapContainers = document.querySelectorAll('.map-container');
+            mapContainers.forEach(container => {
+                container.addEventListener('click', function() {
+                    alert('在实际应用中，这里可以嵌入真实的地图（如百度地图、高德地图）\n\nIn actual use, real maps (like Baidu Maps, Gaode Maps) can be embedded here.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
